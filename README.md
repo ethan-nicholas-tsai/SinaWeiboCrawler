@@ -51,13 +51,6 @@ PROXY_POOL_URL = 'YOUR_PROXY_POOL_URL' # purchase a proxy pool yourself
 
 #### user
 
-```
-# API for all information of user
-https://m.weibo.cn/api/container/getIndex?containerid=100505{uid}
-# API for profile of user
-https://m.weibo.cn/api/container/getIndex?containerid=230283{uid}_-_INFO
-```
-
 | Ind  | Field Name in Response | Field Name in Code | Description                                                  |
 | ---- | ---------------------- | ------------------ | ------------------------------------------------------------ |
 | 1    | id                     | _id                | User id                                                      |
@@ -76,13 +69,6 @@ https://m.weibo.cn/api/container/getIndex?containerid=230283{uid}_-_INFO
 | 14   | mbrank                 | mbrank             | Vip rank of user on Sina Weibo                               |
 
 #### tweet
-
-```
-# API for crawling user tweets
-https://m.weibo.cn/api/container/getIndex?containerid=107603{tid}&page={}
-# API for detailed information of tweet (for long tweet or tweet containing more than 9 pictures)
-https://m.weibo.cn/statuses/extend?id={tid}
-```
 
 | Ind  | Field Name in Code | Field Name in Response | Description                                                  |
 | ---- | ------------------ | ---------------------- | ------------------------------------------------------------ |
@@ -112,6 +98,28 @@ https://m.weibo.cn/statuses/extend?id={tid}
 | 2    | screen_name | User Nickname                              |
 | 3    | orient_type | Type of user to be collected               |
 | 4    | keyword     | Search keyword to filter content of tweets |
+
+
+
+## 4. APIs for Data Collection
+
+### a) User APIs
+
+```
+# API for all information of user
+https://m.weibo.cn/api/container/getIndex?containerid=100505{uid}
+# API for profile of user
+https://m.weibo.cn/api/container/getIndex?containerid=230283{uid}_-_INFO
+```
+
+### b) Tweet APIs
+
+```
+# API for crawling user tweets
+https://m.weibo.cn/api/container/getIndex?containerid=107603{tid}&page={}
+# API for detailed information of tweet (for long tweet or tweet containing more than 9 pictures)
+https://m.weibo.cn/statuses/extend?id={tid}
+```
 
 
 
